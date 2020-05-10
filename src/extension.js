@@ -73,7 +73,7 @@ const BindingToDirection = {
  * (MAX_REASONABLE_WORKSPACES in mutter/src/core/prefs.c)
  *
  * TODO: Remove the upper limit of workspaces, as it appears to not
- * exist in newer version of Gnome
+ *  exist in newer version of Gnome
  */
 const MAX_WORKSPACES = 36;
 const genBindings = function(prefix, count) {
@@ -1399,7 +1399,9 @@ function unexportFunctionsAndConstants() {
  *         EXTENSION       *
  ***************************/
 
-function init() {}
+function init() {
+    console.log("Initialising")
+}
 
 function nWorkspacesChanged() {
     // re-export new rows/cols
@@ -1410,6 +1412,7 @@ function nWorkspacesChanged() {
 
 let signals = [];
 function enable() {
+    console.log("Enabling")
     /// Storage
     nWorkspaces = Meta.prefs_get_num_workspaces();
     settings = Convenience.getSettings();
@@ -1453,6 +1456,7 @@ function enable() {
 }
 
 function disable() {
+    console.log("Disabling")
     unoverrideWorkspaceDisplay();
     unoverrideKeybindingsAndPopup();
     unmodifyNumWorkspaces();
