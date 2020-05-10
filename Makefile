@@ -1,5 +1,5 @@
 #=============================================================================
-UUID=workspace-grid@mathematical.coffee.gmail.com
+UUID=workspace-grid-2@arkaprava94.gmail.com
 FILES=metadata.json *.js stylesheet.css schemas *.svg *.png
 #=============================================================================
 default_target: all
@@ -24,4 +24,4 @@ dev-zip: schemas
 install: schemas
 	mkdir -p ~/.local/share/gnome-shell/extensions/$(UUID)
 	yes | \cp -r src/* ~/.local/share/gnome-shell/extensions/$(UUID)/
-	gnome-shell-extension-tool -r $(UUID)
+	gnome-extensions enable $(UUID)
