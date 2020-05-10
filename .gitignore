@@ -2,3 +2,6 @@ gschemas.compiled
 *.mo
 node_modules/
 *.zip
+
+# ignore editor files
+.idea/
