@@ -24,4 +24,4 @@ dev-zip: schemas
 install: schemas
 	mkdir -p ~/.local/share/gnome-shell/extensions/$(UUID)
 	yes | \cp -r src/* ~/.local/share/gnome-shell/extensions/$(UUID)/
-	gnome-extensions enable $(UUID)
+	gnome-shell-extension-tool -r $(UUID)
