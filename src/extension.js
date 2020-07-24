@@ -1400,7 +1400,7 @@ function unexportFunctionsAndConstants() {
  ***************************/
 
 function init() {
-    console.log("Initialising")
+    log("Initialising")
 }
 
 function nWorkspacesChanged() {
@@ -1412,7 +1412,7 @@ function nWorkspacesChanged() {
 
 let signals = [];
 function enable() {
-    console.log("Enabling")
+    log("Enabling")
     /// Storage
     nWorkspaces = Meta.prefs_get_num_workspaces();
     settings = Convenience.getSettings();
@@ -1456,7 +1456,7 @@ function enable() {
 }
 
 function disable() {
-    console.log("Disabling")
+    log("Disabling")
     unoverrideWorkspaceDisplay();
     unoverrideKeybindingsAndPopup();
     unmodifyNumWorkspaces();
